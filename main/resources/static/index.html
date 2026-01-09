@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Resume Screening System</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🤖 AI Resume Screening System</h1>
+    <p class="subtitle">Upload your resume (PDF / DOCX)</p>
+
+    <form id="uploadForm">
+        <input type="file" id="file" name="file" required />
+        <p id="fileName" class="file-name"></p>
+        <button type="submit">🚀 Upload & Analyze</button>
+    </form>
+
+    <p id="uploadStatus" class="status"></p>
+
+
+    <div id="loading" class="hidden">
+        <div class="spinner"></div>
+        <p>Analyzing resume...</p>
+    </div>
+
+    <div id="result" class="hidden">
+        <div class="card">
+            <h3>🧠 AI Summary</h3>
+            <p id="summary"></p>
+        </div>
+
+        <div class="card">
+            <h3>📊 ATS Report</h3>
+            <p id="ats"></p>
+        </div>
+
+        <div class="card">
+            <h3>⚖️ Bias Detection</h3>
+            <p id="bias"></p>
+        </div>
+
+        <div class="card">
+            <h3>🛠️ Extracted Skills</h3>
+            <p id="skills"></p>
+        </div>
+
+        <div class="score">
+            <h2>🎯 Job Match: <span id="match"></span>%</h2>
+        </div>
+    </div>
+</div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
